@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SpicyDen"
+    }
+  },
+  "defaultProject": "SpicyDen",
+  "cli": {
+    "analytics": false
+  }
 }

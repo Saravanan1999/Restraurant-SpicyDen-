@@ -1,0 +1,28 @@
+<body style="background-color: black;">
+<div class="container"
+     fxLayout="column"
+     >
+
+  <div fxFlex  >
+    <div>
+      <h3 style="color:white">Check out our Tasty Menu </h3>
+      <h4 style="color:white">Breakfast & Dinner</h4>
+    </div>
+  </div>
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of dishes">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+</div>
+<br>
+<br>
+</body>
+

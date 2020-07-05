@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~10.0.2",
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
+    "@ionic-native/camera": "^5.27.0",
+    "@ionic-native/core": "^5.27.0",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.5.5",

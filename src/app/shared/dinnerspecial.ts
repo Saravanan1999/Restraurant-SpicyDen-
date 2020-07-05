@@ -1,0 +1,73 @@
+import {Dish} from './dish';
+export const DINNERSPECIAL: Dish[] = [
+    {
+        id:43,
+        name:'Appam',
+        image:"/assets/images/appam.jpg",
+        category: 'dinner',
+        price:"Rs.60",   
+    },
+    {
+        id:44,
+        name:'Mini idli',
+        image:"/assets/images/miniidli.jpg",
+        category: 'dinner',
+        price:"Rs.40",   
+    },
+    {
+        id:45,
+        name:'Chola Poori',
+        image:"/assets/images/cholapoori.jpg",
+        category: 'dinner',
+        price:"Rs.80",   
+    },
+    {
+        id:46,
+        name:'Paniyaram',
+        image:"/assets/images/paniyaram.jpg",
+        category: 'dinner',
+        price:"Rs.50",   
+    },
+    {
+        id:47,
+        name:'Adai',
+        image:"/assets/images/adai.jpg",
+        category: 'dinner',
+        price:"Rs.80",   
+    },
+    {
+        id:48,
+        name:'Phulka',
+        image:"/assets/images/phulka.jpg",
+        category: 'dinner',
+        price:"Rs.70",   
+    },
+    {
+        id:49,
+        name:'Naan',
+        image:"/assets/images/Naan.jpg",
+        category: 'dinner',
+        price:"Rs.105",   
+    },
+    {
+        id:50,
+        name:'kulcha',
+        image:"/assets/images/khulcha.jpg",
+        category: 'dinner',
+        price:"Rs.115",   
+    },
+    {
+        id:51,
+        name:'Noodles',
+        image:"/assets/images/noodles.jpg",
+        category: 'dinner',
+        price:"Rs.90",   
+    },
+    {
+        id:52,
+        name:'Mini tiffin',
+        image:"/assets/images/minitiffin.jpg",
+        category: 'dinner',
+        price:"Rs.150",   
+    },
+]

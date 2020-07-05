@@ -6,13 +6,102 @@
   <div fxFlex  >
     <div>
       <h3 style="color:white">Check out our Tasty Menu </h3>
-      <h4 style="color:white">Breakfast & Dinner</h4>
+    <center> <span style="color:white"> <a href="#Breakfast" style="color:white" >Breakfast & Dinner</a> &nbsp;|&nbsp;<a href="#Lunch"style="color:white" >Lunch</a>&nbsp;|&nbsp;<a href="#Starters" style="color:white">Starters</a>&nbsp;|&nbsp;<a href="#Dinner" style="color:white" >Dinner Specials</a>
+     &nbsp;|&nbsp;<a href="#Hot" style="color:white">Hot Beverages</a> &nbsp;|&nbsp;<a href="#Cold" style="color:white"> Juices & Cold Beverages</a>&nbsp;|&nbsp;<a href="#Sweets" style="color:white">Sweets</a></span></center>
+     <h4 style="color:white" id="Breakfast">Breakfast & Dinner</h4>
     </div>
   </div>
 
   <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px" >
+      <mat-grid-tile *ngFor="let dish of dishes" >
+        <img height="200px" src={{dish.image}} alt={{dish.name}} >
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+<br>
+<hr><br>
+
+  <h4 style="color:white" id="Lunch">Lunch</h4>
+    
+
+  <div fxFlex >
     <mat-grid-list cols="2" rowHeight="200px">
-      <mat-grid-tile *ngFor="let dish of dishes">
+      <mat-grid-tile *ngFor="let dish of lunches">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+<br><br>
+<h4 style="color:white" id="Starters">Starters</h4>
+
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of starters">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+<br><br>
+  <h4 style="color:white" id="Dinner">Dinner Specials</h4>
+
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of dinnerspecial">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+<br><br>
+    <h4 style="color:white" id="Hot">Hot Beverages</h4>
+  
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of hotbeverages">
+        <img height="200px" src={{dish.image}} alt={{dish.name}}>
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+<br><br>
+      <h4 style="color:white" id="Cold">Juices & Cold Beverages</h4>
+
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of coldbeverages">
+        <img height="200px" src={{dish.image}} alt={{dish.name}} >
+        <mat-grid-tile-footer>
+          <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>
+        </mat-grid-tile-footer>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+ 
+  <br><br>
+      <h3 style="color:white" id="Sweets">Sweets </h3>
+  
+
+  <div fxFlex >
+    <mat-grid-list cols="2" rowHeight="200px">
+      <mat-grid-tile *ngFor="let dish of sweets">
         <img height="200px" src={{dish.image}} alt={{dish.name}}>
         <mat-grid-tile-footer>
           <h1>{{dish.name | uppercase}}  &nbsp;&nbsp;<span style="color:orange">{{dish.price}}</span></h1>

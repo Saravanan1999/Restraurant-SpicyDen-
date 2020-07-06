@@ -7,6 +7,15 @@
     padding:40px;
     padding-left: 60px;
   }
+  .column1 {
+    float: left;
+    width: 25%;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    padding:20px;
+    padding-left: 50px;
+  }
   .container{
     overflow-x:hidden;
   }
@@ -18,3 +27,20 @@
     display: table;
     clear: both;
   }
+  .mat-card{
+      height:355px;
+  }
+  #chef:hover{
+      font-size:100px;
+  }
+  a img { 
+      display:none; 
+      text-decoration: none;
+    }
+    a:hover img { 
+        display:inline;
+        text-decoration:none;
+    }
+
+
+  

@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { DishService } from './services/dish.service';
 import { AboutComponent } from './about/about.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { AboutComponent } from './about/about.component';
     FooterComponent,
     HomeComponent,
     MenuComponent,
-    AboutComponent
+    AboutComponent,
+    ContactusComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,148 @@
+.column1{
+    float: left;
+    width: 40%;
+    
+    align-content: center;
+    padding:40px;
+    padding-left: 70px;    
+}
+.column2{
+    float: left;
+    width: 60%;
+    align-content: center;
+    
+    padding:40px;
+    padding-left: 60px;    
+}
+.container{
+    overflow-x:hidden;
+  }
+  .row{
+    width: 100%;
+}
+.contact .info {
+    width: 100%;
+  }
+  section {
+    padding: 10px 0;
+    overflow: hidden;
+    background-image: url('bog.jpg');
+  }
+  
+  .section-bg {
+    background-color: #1a1814;
+  }
+  
+  .section-title {
+    padding-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .section-title h2::after {
+    content: "";
+    width: 120px;
+    height: 1px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 4px 10px;
+  }
+  
+  .section-title p {
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: #cda45e;
+  }
+  .contact .info i {
+    font-size: 20px;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background:tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .contact .info .open-hours, .contact .info .email, .contact .info .phone {
+    margin-top: 40px;
+  }
+  
+  button[type="submit"] {
+    background:tomato;
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+  textarea {
+    padding: 10px 12px;
+    background:black;
+  }
+  input{
+    padding: 10px 12px;
+    background:black;
+  }
+  textarea:focus { 
+    outline: none !important;
+    border-color: tomato;
+    background:black;
+    box-shadow: 0 0 10px tomato;
+}
+input:focus { 
+    outline: none !important;
+    border-color: tomato;
+    background:black;
+    box-shadow: 0 0 10px tomato;
+}
+
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

@@ -6,3 +6,6 @@ function bigImg(x) {
     x.style.height = "300px";
     
   }
+  $('.carousel').carousel({
+    interval: 2000
+  })

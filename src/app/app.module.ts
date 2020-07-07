@@ -17,6 +17,7 @@ import { DishService } from './services/dish.service';
 import { AboutComponent } from './about/about.component';
 
 import { ContactComponent } from './contact/contact.component';
+import { EventsComponent } from './events/events.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,9 @@ import { ContactComponent } from './contact/contact.component';
     MenuComponent,
     AboutComponent,
     
-    ContactComponent
+    ContactComponent,
+    
+    EventsComponent
   ],
   imports: [
     BrowserModule,

@@ -9,3 +9,8 @@ function bigImg(x) {
   $('.carousel').carousel({
     interval: 2000
   })
+
+var myVar;
+
+
+

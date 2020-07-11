@@ -19,8 +19,8 @@ export class ContactComponent implements OnInit {
    }
    createForm() {
     this.feedbackForm = this.fb.group({
-      name: ['', Validators.required ],
-      email: ['', Validators.required ],
+      name: ['', [Validators.required,Validators.minLength(2),Validators.maxLength(15)]  ],
+      email: ['', [Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")] ],
       subject: ['', Validators.required ],
       message: ['', Validators.required ]
     });

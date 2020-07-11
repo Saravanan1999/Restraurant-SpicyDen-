@@ -46,23 +46,25 @@
                  <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
                     <div class="form-row">
                       <div class="col-md-6 form-group">
-                        <input matInput formControlName="name" type="text" name="name" class="form-control" id="name"   placeholder="Your Name"  required/>
-                        <mat-error *ngIf="feedbackForm.get('name').hasError('required') && feedbackForm.get('name').touched" style="color:tomato">Name is required</mat-error>
-                        <div class="validate"></div>
+                        <input matInput formControlName="name" type="text" name="name" class="form-control" id="name"   placeholder="Your Name" style="color:white" required/>
+                        <mat-error *ngIf="feedbackForm.get('name').hasError('minlength') && feedbackForm.get('name').touched" style="color:tomato">Your name must be greater than 2 characters</mat-error>
+                        <mat-error *ngIf="feedbackForm.get('name').hasError('maxlength') && feedbackForm.get('name').touched" style="color:tomato">Your name must be lesser than 15 characters</mat-error>
+                        
                       </div>
                       <div class="col-md-6 form-group">
-                        <input matInput formControlName="email" type="email" class="form-control"  name="email" id="email"   placeholder="Your Email" required/>
-                        <mat-error *ngIf="feedbackForm.get('email').hasError('required') && feedbackForm.get('email').touched" style="color:tomato">Email Id is required</mat-error>
+                        <input matInput formControlName="email" type="email" class="form-control"  name="email" id="email" style="color:white"  placeholder="Your Email" style="color:white" required/>
+                        <mat-error *ngIf="feedbackForm.get('email').hasError('required') && feedbackForm.get('email').touched"  style="color:tomato">Email Id is required</mat-error>
+                        <mat-error *ngIf="feedbackForm.get('email').hasError('pattern') && feedbackForm.get('email').touched" style="color:tomato">Not a valid email</mat-error>
                         <div class="validate"></div>
                       </div>
                     </div>
                     <div class="form-group">
-                     <br> <input matInput formControlName="subject" type="text" class="form-control" name="subject"  id="subject" placeholder="Subject"  required/>
+                     <input matInput formControlName="subject" type="text" class="form-control" name="subject" style="color:white"  id="subject" placeholder="Subject"  required/>
                       <mat-error *ngIf="feedbackForm.get('subject').hasError('required') && feedbackForm.get('subject').touched" style="color:tomato">Subject is required</mat-error>
                       <div class="validate"></div>
                     </div>
                     <div class="form-group">
-                      <textarea matInput formControlName="message" class="form-control" name="message"  rows="8" placeholder="Your Message" ></textarea>
+                      <textarea matInput formControlName="message" class="form-control" name="message"  rows="8" placeholder="Your Message" style="color:white" ></textarea>
                       <mat-error *ngIf="feedbackForm.get('message').hasError('required') && feedbackForm.get('message').touched" style="color:tomato">Message is required</mat-error>
                       <div class="validate"></div>
                     </div>

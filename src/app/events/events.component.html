@@ -8,15 +8,19 @@
     <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
         <div class="form-row" style="color:white">
           <div class="col-lg-4 col-md-6 form-group">
-            <input matInput formControlName="name"  type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+            <input matInput formControlName="name"  type="text" name="name" class="form-control" id="name" placeholder="Your Name" style="color:white">
             <mat-error *ngIf="bookingForm.get('name').hasError('required') && bookingForm.get('name').touched" style="color:tomato">Name is required</mat-error>
+            <mat-error *ngIf="bookingForm.get('name').hasError('minlength') && bookingForm.get('name').touched" style="color:tomato">Your name must be greater than 2 characters</mat-error>
+            <mat-error *ngIf="bookingForm.get('name').hasError('maxlength') && bookingForm.get('name').touched" style="color:tomato">Your name must be lesser than 15 characters</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input matInput formControlName="email"  type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+            <input matInput formControlName="email"  type="email" class="form-control" name="email" id="email" placeholder="Your Email"  style="color:white" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <mat-error *ngIf="bookingForm.get('email').hasError('required') && bookingForm.get('email').touched" style="color:tomato">Email is required</mat-error>
+            <mat-error *ngIf="bookingForm.get('email').hasError('pattern') && bookingForm.get('email').touched" style="color:tomato">Not a valid email</mat-error>
+            
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input matInput formControlName="phone"  type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" >
+            <input matInput formControlName="phone"  type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" style="color:white" >
             <mat-error *ngIf="bookingForm.get('phone').hasError('required') && bookingForm.get('phone').touched" style="color:tomato">Phone is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">

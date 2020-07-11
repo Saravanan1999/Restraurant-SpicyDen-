@@ -10,8 +10,10 @@ const routes: Routes = [
   { path: 'menu',     component: MenuComponent},
   { path:'home',component:HomeComponent},
   { path:'about',component:AboutComponent},
-  { path:'contact',component:ContactComponent},
   { path:'events',component:EventsComponent},
+  { path:'contact',component:ContactComponent}
+  
+  
 
 ];
 

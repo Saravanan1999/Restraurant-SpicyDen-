@@ -5,36 +5,36 @@
     <h3 style="color:tomato;padding-left: 20px;">Reservation</h3>
     <h4 style="color:whitesmoke;padding-left: 20px;">Book a Table</h4>
     <div style="padding:20px 150px 20px 150px;">
-    <form>
+    <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()">
         <div class="form-row" style="color:white">
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
-         
+            <input matInput formControlName="name"  type="text" name="name" class="form-control" id="name" placeholder="Your Name" >
+            <mat-error *ngIf="bookingForm.get('name').hasError('required') && bookingForm.get('name').touched" style="color:tomato">Name is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
-           
+            <input matInput formControlName="email"  type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+            <mat-error *ngIf="bookingForm.get('email').hasError('required') && bookingForm.get('email').touched" style="color:tomato">Email is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" >
-            
+            <input matInput formControlName="phone"  type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" >
+            <mat-error *ngIf="bookingForm.get('phone').hasError('required') && bookingForm.get('phone').touched" style="color:tomato">Phone is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="text" name="date" class="form-control" id="date" placeholder="Date" >
-            
+            <input matInput formControlName="date"  type="text" name="date" class="form-control" id="date" placeholder="Date" >
+            <mat-error *ngIf="bookingForm.get('date').hasError('required') && bookingForm.get('date').touched" style="color:tomato">Date is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="text" class="form-control" name="time" id="time" placeholder="Time" >
-            
+            <input matInput formControlName="time"  type="text" class="form-control" name="time" id="time" placeholder="Time" >
+            <mat-error *ngIf="bookingForm.get('time').hasError('required') && bookingForm.get('time').touched" style="color:tomato">Time is required</mat-error>
           </div>
           <div class="col-lg-4 col-md-6 form-group">
-            <input type="number" class="form-control" name="people" id="people" placeholder="Number of people" >
-            
+            <input matInput formControlName="people"  type="number" class="form-control" name="people" id="people" placeholder="Number of people" >
+            <mat-error *ngIf="bookingForm.get('people').hasError('required') && bookingForm.get('people').touched" style="color:tomato">No. of people is required</mat-error>
           </div>
         </div>
         <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-         
+          <textarea matInput formControlName="message"  class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          
         </div>
 
         <div class="text-center"><button type="submit">Book a Table</button></div>
